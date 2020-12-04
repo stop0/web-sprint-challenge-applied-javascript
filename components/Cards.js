@@ -50,18 +50,121 @@ function article(Obj) {
     name.textContent = Obj.authorName
 
 
+
+
+    function myFunction() {
+        console.log(Obj.headline)
+    
+    }
+    
+
+
+    let el = document.querySelectorAll(".card")
+    // console.log(el)
+
+
+    el.forEach(element => {
+        element.addEventListener("Click", myFunction)
+    });
+
+
+
+
+
+
     return card
+
+
+    
 }
+
+
+
+
+
+
+//  let ss = async  function (){
+//      console.log("It works")
+//  }
+
+
+
+
+// el.addEventListener("click", function (e) {
+//     console.log(e.currentTarget === this) // logs `true`
+// })
+
+
+
+  
+let topicL = document.querySelector(".cards-container")
+
 
 
 
 
 axios.get("https://lambda-times-api.herokuapp.com/articles")
     .then( response => {
-        console.log(response.data)
-        // topicL.append(topics(element))
-    // /  topicL.append(topics(response.data.topics))
+        console.log(response.data.articles.javascript)
+        console.log(response.data.articles)
+        response.data.articles.javascript.forEach(element => {
+            topicL.append(article(element))
+        })
+        // topicL.append(article(response.data.articles.bootstrap[0]))
     })
     .catch( err => {
       console.log(err)
     })
+
+
+    axios.get("https://lambda-times-api.herokuapp.com/articles")
+    .then( response => {
+        console.log(response.data.articles.bootstrap)
+        response.data.articles.bootstrap.forEach(element => {
+            topicL.append(article(element))
+        })
+        // topicL.append(article(response.data.articles.bootstrap[0]))
+    })
+    .catch( err => {
+      console.log(err)
+    })
+
+
+    axios.get("https://lambda-times-api.herokuapp.com/articles")
+    .then( response => {
+        console.log(response.data.articles.jquery)
+        response.data.articles.jquery.forEach(element => {
+            topicL.append(article(element))
+        })
+        // topicL.append(article(response.data.articles.bootstrap[0]))
+    })
+    .catch( err => {
+      console.log(err)
+    })
+
+
+    axios.get("https://lambda-times-api.herokuapp.com/articles")
+    .then( response => {
+        console.log(response.data.articles.node)
+        response.data.articles.node.forEach(element => {
+            topicL.append(article(element))
+        })
+        // topicL.append(article(response.data.articles.bootstrap[0]))
+    })
+    .catch( err => {
+      console.log(err)
+    })
+
+
+    axios.get("https://lambda-times-api.herokuapp.com/articles")
+    .then( response => {
+        console.log(response.data.articles.technology)
+        response.data.articles.technology.forEach(element => {
+            topicL.append(article(element))
+        })
+        // topicL.append(article(response.data.articles.bootstrap[0]))
+    })
+    .catch( err => {
+      console.log(err)
+    })
+
