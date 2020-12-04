@@ -52,7 +52,7 @@ function article(Obj) {
 
 
 
-    document.body.addEventListener("click", function(){
+    card.addEventListener("click", function(){
         console.log(Obj.headline);
       });
 
