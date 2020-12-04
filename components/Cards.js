@@ -52,21 +52,9 @@ function article(Obj) {
 
 
 
-    function myFunction() {
-        console.log(Obj.headline)
-    
-    }
-    
-
-
-    let el = document.querySelectorAll(".card")
-    // console.log(el)
-
-
-    el.forEach(element => {
-        element.addEventListener("Click", myFunction)
-    });
-
+    document.body.addEventListener("click", function(){
+        console.log(Obj.headline);
+      });
 
 
 
@@ -80,19 +68,11 @@ function article(Obj) {
 
 
 
+// document.body.addEventListener("click", function(){
+//     console.log("it Works");
+//   });
 
 
-
-//  let ss = async  function (){
-//      console.log("It works")
-//  }
-
-
-
-
-// el.addEventListener("click", function (e) {
-//     console.log(e.currentTarget === this) // logs `true`
-// })
 
 
 
