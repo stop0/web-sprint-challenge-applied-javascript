@@ -68,9 +68,9 @@ function article(Obj) {
 
 
 
-// document.body.addEventListener("click", function(){
-//     console.log("it Works");
-//   });
+document.body.addEventListener("click", function(){
+    console.log("it Works");
+  });
 
 
 
@@ -90,7 +90,6 @@ axios.get("https://lambda-times-api.herokuapp.com/articles")
         response.data.articles.javascript.forEach(element => {
             topicL.append(article(element))
         })
-        // topicL.append(article(response.data.articles.bootstrap[0]))
     })
     .catch( err => {
       console.log(err)
@@ -103,7 +102,6 @@ axios.get("https://lambda-times-api.herokuapp.com/articles")
         response.data.articles.bootstrap.forEach(element => {
             topicL.append(article(element))
         })
-        // topicL.append(article(response.data.articles.bootstrap[0]))
     })
     .catch( err => {
       console.log(err)
@@ -116,7 +114,6 @@ axios.get("https://lambda-times-api.herokuapp.com/articles")
         response.data.articles.jquery.forEach(element => {
             topicL.append(article(element))
         })
-        // topicL.append(article(response.data.articles.bootstrap[0]))
     })
     .catch( err => {
       console.log(err)
@@ -129,7 +126,6 @@ axios.get("https://lambda-times-api.herokuapp.com/articles")
         response.data.articles.node.forEach(element => {
             topicL.append(article(element))
         })
-        // topicL.append(article(response.data.articles.bootstrap[0]))
     })
     .catch( err => {
       console.log(err)
@@ -142,7 +138,6 @@ axios.get("https://lambda-times-api.herokuapp.com/articles")
         response.data.articles.technology.forEach(element => {
             topicL.append(article(element))
         })
-        // topicL.append(article(response.data.articles.bootstrap[0]))
     })
     .catch( err => {
       console.log(err)
